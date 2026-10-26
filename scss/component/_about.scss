@@ -4,26 +4,35 @@
 #about {
   background-color: $primary-light;
   color: $primary;
-  min-height: 80vh;
   display: flex;
   align-items: center;
-  overflow-x: hidden;
+  justify-content: center;
+  overflow-x: clip;
+  box-sizing: border-box;
+  min-height: calc(100svh - 7rem);
+  padding: 1.25rem 0;
 
   @include media-query-m($break-m) {
     min-height: 40vh;
+    padding: 0;
   }
 
   .vertical-center {
     width: 100%;
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
   }
 
   #aboutme {
-    margin: auto;
+    margin: 0 auto;
     color: $primary;
     max-width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
 
     .hello {
       font-style: italic;
@@ -31,9 +40,11 @@
 
     .name {
       font-family: "Basic", sans-serif;
-      font-size: clamp(2.5rem, 10vw, 5em);
-      padding-bottom: 20px;
-      line-height: 1.15;
+      font-size: clamp(1.75rem, 8vw, 5em);
+      padding-bottom: 16px;
+      line-height: 1.1;
+      max-width: 100%;
+      overflow-wrap: break-word;
     }
 
     .btn {
