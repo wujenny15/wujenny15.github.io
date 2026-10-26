@@ -8,7 +8,9 @@
 /*              Footer styles                    */
 /* ============================================= */
 html, body {
-  height: 100%; }
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden; }
 
 body {
   display: flex;
@@ -86,8 +88,7 @@ body {
   left: 0;
   top: 0;
   background-color: #F0EDE6;
-  overflow-x: hidden;
-  /* Disable horizontal scroll */
+  overflow: hidden;
   transition: 0.5s;
   /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */ }
 
@@ -214,10 +215,12 @@ form input[type="submit"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-x: clip;
+  overflow: hidden;
   box-sizing: border-box;
-  min-height: calc(100svh - 7rem);
-  padding: 1.25rem 0; }
+  width: 100%;
+  max-width: 100%;
+  min-height: 0;
+  padding: 4rem 1.25rem; }
   @media (min-width: 720px) {
     #about {
       min-height: 40vh;
@@ -228,23 +231,28 @@ form input[type="submit"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 0.75rem !important;
-    padding-bottom: 0.75rem !important; }
+    padding-top: 0 !important;
+    padding-bottom: 0 !important; }
   #about #aboutme {
     margin: 0 auto;
     color: #dd7564;
+    width: 100%;
     max-width: 100%;
-    padding: 0 1rem;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    text-align: center; }
     #about #aboutme .hello {
       font-style: italic; }
     #about #aboutme .name {
       font-family: "Basic", sans-serif;
-      font-size: clamp(1.75rem, 8vw, 5em);
+      font-size: 2.25rem;
       padding-bottom: 16px;
       line-height: 1.1;
       max-width: 100%;
-      overflow-wrap: break-word; }
+      overflow-wrap: anywhere;
+      word-break: break-word; }
+      @media (min-width: 720px) {
+        #about #aboutme .name {
+          font-size: 5em; } }
     #about #aboutme .btn {
       color: #1fa5a6;
       border-color: #1fa5a6; }
