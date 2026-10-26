@@ -108,33 +108,3 @@ function openNav() {
   document.getElementById("overlay-menu").style.width = "100%";
 }
 
-
-var ctx = document.getElementById("myChart").getContext("2d");
-
-new Chart(document.getElementById("myChart"), {
-  type: "polarArea",
-  data: {
-    labels: ["UI & UX", "Front End Development", "Back End Development", "Software Testing", "Tools", "Data Analysis"],
-    datasets: [
-      {
-        label: "My First Dataset",
-        data: [7, 8, 11, 7, 7,5],
-        backgroundColor: [
-          "rgb(255, 99, 132)",
-          "rgb(75, 192, 192)",
-          "rgb(255, 205, 86)",
-          "rgb(201, 203, 207)",
-          "rgb(54, 162, 235)",
-          "rgb(54, 152, 225)",
-        ],
-      },
-    ],
-  },
-  options: {
-    legend: {
-        display: true,
-        position: 'bottom',
-    }
-}
-});
-
