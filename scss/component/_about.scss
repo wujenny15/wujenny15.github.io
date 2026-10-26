@@ -4,24 +4,26 @@
 #about {
   background-color: $primary-light;
   color: $primary;
-  height: 80vh;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+
   @include media-query-m($break-m) {
-    height: 40vh;
+    min-height: 40vh;
   }
 
   .vertical-center {
-    min-height: 100%;
-    min-height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
-    @include media-query-m($break-m) {
-      min-height: 40vh;
-    }
+    justify-content: center;
   }
 
   #aboutme {
     margin: auto;
     color: $primary;
+    max-width: 100%;
 
     .hello {
       font-style: italic;
@@ -29,8 +31,9 @@
 
     .name {
       font-family: "Basic", sans-serif;
-      font-size: 5em;
+      font-size: clamp(2.5rem, 10vw, 5em);
       padding-bottom: 20px;
+      line-height: 1.15;
     }
 
     .btn {
